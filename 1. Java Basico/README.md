@@ -8,3 +8,5 @@
 - paquetes
 - programacion orientada a objetos
 - estructura de datos
+
+Cualquier duda o consulta a mi correo: pxhcastr@cibertec.edu.pe
