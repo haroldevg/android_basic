@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Constraintlayout: Es el layout mas complejo, a comparacion de los anteriores.
+    En este ejemplo vamos a utilizar un Barrier para agrupar los textos y permitir
+    que su crecimiento en diferentes traducciones no afecte el alineamiento de
+    los campos de texto.
+
+    ** Este es el ejemplo que no pude replicar en clase por que el barrier no se
+    comportaba correctamente en el diseñador.
+
+    *** Como recomendacion para constraintlayout, cada vez que unan views o lo
+    unan al padre vean el codigo que se genera en XML, de esta forma pueden
+    comprender el por que de su comportamiento.
+
+    *** En el caso de constraintlayout, les recomiendo utilizar el editor, te
+    facilita mucho la vida. (solo para este caso)
+
+
+-->
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Password"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText2"
+        app:layout_constraintEnd_toEndOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Escribe tu usuario"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Iniciar sesión"
+        app:layout_constraintStart_toStartOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="textView4,textView5"
+        tools:layout_editor_absoluteX="411dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

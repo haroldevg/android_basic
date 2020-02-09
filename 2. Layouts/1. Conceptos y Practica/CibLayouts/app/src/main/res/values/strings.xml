@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CibLayouts</string>
+    <string name="weight_1">WEIGHT 1</string>
+    <string name="weight_2">WEIGHT 2</string>
+    <string name="weight_3">WEIGHT 3</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="hide">OCULTAR</string>
+    <string name="like_2">ME DISGUSTA</string>
+    <string name="like_1">ME GUSTA</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_book_sample">Divina Comedia</string>
+    <string name="date_sample">Hace unos segundos</string>
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+</resources>

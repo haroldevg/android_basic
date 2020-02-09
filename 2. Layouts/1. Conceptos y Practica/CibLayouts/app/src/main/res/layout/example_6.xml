@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SP: scale independent pixels
+    DP: density independent pixels
+
+    sp: for font sizes
+    dp: for everything else
+
+    En el caso del spinner hay un codigo comentado en la actividad.
+    En el include del activity_main, elijan este layout y luego descomenten ese
+    codigo, si no lo descomentan no podran ver informacion
+
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="15dp"
+        android:hint="Escribe tu nombre aqui" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_example"
+        android:layout_marginTop="15dp"
+        android:text="Button" />
+
+    <CheckBox
+        android:id="@+id/chx_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="CHECKBOX"
+        android:layout_below="@id/button5" />
+
+    <RadioButton
+        android:id="@+id/rb_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RADIO BUTTON"
+        android:layout_below="@id/chx_example"
+        android:checked="true"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Spinner
+        android:id="@+id/sp_example"
+        android:textAlignment="center"
+        android:layout_below="@id/rb_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ProgressBar
+        android:id="@+id/pb_example_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sp_example" />
+
+    <ProgressBar
+        android:id="@+id/pgb_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pb_example_circular"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="40" />
+
+    <SeekBar
+        android:id="@+id/sk_example"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pgb_example"
+        android:max="100"
+        android:progress="20"/>
+
+    <Switch
+        android:id="@+id/sw_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sk_example"
+        android:showText="true"
+        android:text="Switch"
+        android:textOff="OFF"
+        android:textOn="ON" />
+
+    <RatingBar
+        android:id="@+id/rtb_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sw_example"
+        android:numStars="5" />
+
+
+</RelativeLayout>

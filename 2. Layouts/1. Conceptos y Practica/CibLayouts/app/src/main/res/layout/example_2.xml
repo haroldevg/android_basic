@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+    LinearLayout: basicamente este layout te permite ordenar los elementos
+    en horizontal o vertical
+
+    Tambien puedes otorgar "pesos" a los hijos del linearlayout.
+    para que puedan ocupar todo el espacio disponible en la vista
+
+    Propiedades del layout:
+
+    - sumWeight: es cuanto deseas que sea el 100% en peso del layout y respecto
+    a eso se ojustaran los hijos
+
+    Propiedades del hijo:
+
+    - weight: peso para cada vista, (el 100% es la sumatoria de todos)
+
+-->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"
+        android:text="@string/weight_1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:text="@string/weight_2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:text="@string/weight_3"/>
+
+
+</LinearLayout>

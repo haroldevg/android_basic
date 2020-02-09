@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+RelativeLayout: En este ejemplo vamos a ordenador los elementos entre ellos
+Segun lo conversado en clase: relativelayout te permite ordenar los elementos segun al padre(el layout)
+o entre los hijos.
+
+Propiedades:
+
+- layout_below
+- layout_above
+- layout_toStartOf
+- layout_toEndOf
+- layout_alignParentEnd
+- layout_alignParentStart
+- layout_alignParentTop
+- layout_alignParentBottom
+... entre otros
+
+
+***Como recomendación, la forma mas rapida para poder aprender a usar
+relativelayout es jugando con los views, memorizarlo no es tan necesario
+por que el IDE te muestra cuales puedes utilizar.
+
+
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe aqui tu nombre" />
+
+    <Spinner
+        android:id="@+id/sp_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_name"
+        android:layout_toStartOf="@id/sp_time"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/sp_time"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_name"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:layout_below="@id/sp_time"
+        android:layout_alignParentEnd="true"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+    Un ejemplo basico para crear un "card" de informacion de libros.
+    Utilice varios layouts para demostrar el uso de cada uno. Se puede hacer
+    de otras formas, no es la unica.
+
+ -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icon_book"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Noche de lluvia"
+                    android:textSize="19sp"
+                    android:maxLines="1"
+                    android:textStyle="bold|italic" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26 DIC 2017"
+                    android:textSize="19sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_ipsum"
+                android:maxLines="3"
+                android:ellipsize="end" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ME GUSTA"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="COMENTAR"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>
