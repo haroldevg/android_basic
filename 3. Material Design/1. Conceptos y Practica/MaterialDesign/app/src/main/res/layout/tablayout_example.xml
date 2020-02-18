@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ scroll: Indica que la action bar debe ocultarse cuando se haga scroll hacia abajo en la lista.
+ enterAlways: Indica que la action bar debe mostrarse en cuanto se comience a hacer scroll hacia
+    arriba en la lista, lo que se conoce como quick return. Si no se utiliza este indicativo,
+    la action bar sólo se mostraría al alcanzarse el primer elemento de la lista.
+ -->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--
+
+         En el caso del scrollflags vamos a expandir un poco mas los conceptos:
+
+         - enterAlways: el view sera visible cuando el usuario haga scroll hacia arriba
+
+         -->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_main"
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content"/>
+
+        <!--app:tabMode="scrollable"-->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tbl_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:layout_scrollFlags="scroll|enterAlways"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--
+
+     Con respecto a lo mencionado en clase:
+
+     appbar_scrolling_view_behavior: permite dar a entender al coordinator layout que el evento scroll
+     que se realice en el nestedscrollview se notificará al appbarlayout
+
+     -->
+    <androidx.core.widget.NestedScrollView
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="bottom|end"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
