@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity">
-    <ListView
-        android:id="@+id/lv_main"
+    tools:context=".FifthActivity">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:scrollbars="vertical"
+        android:layout_height="match_parent" />
 </RelativeLayout>

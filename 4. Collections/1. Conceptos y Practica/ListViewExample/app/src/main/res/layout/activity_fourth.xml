@@ -4,9 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity">
-    <ListView
-        android:id="@+id/lv_main"
+    tools:context=".FourthActivity">
+
+    <GridView
+        android:id="@+id/gv_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:columnWidth="100dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:padding="10dp"
+        android:verticalSpacing="10dp"
+        />
+
 </RelativeLayout>
