@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TabExample</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">OPENED</string>
+    <string name="navigation_drawer_close">CLOSED</string>
+    <string name="menu_camera">Camara</string>
+    <string name="menu_gallery">Galeria</string>
+    <string name="menu_tools">Herramientas</string>
+    <string name="menu_group">Grupo</string>
+    <string name="menu_share">Compartir</string>
+    <string name="menu_send">Enviar</string>
+</resources>
