@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FragmentClass</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="yes">SI</string>
+    <string name="no">NO</string>
+    <string name="like_article">¿Te gusta el artículo?</string>
+    <string name="yes_message">ARTICLE: Like</string>
+    <string name="no_message">ARTICLE: Thanks</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
